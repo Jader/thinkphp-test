@@ -20,11 +20,11 @@ project_root/
 ## 测试登录API
 
 ```sh
-curl -X POST http://your_domain.com/login -d "username=your_username&password=your_password"
+curl -X POST http://your_domain.com/user/login -d "username=your_username&password=your_password"
 ```
 
 ## 测试业务API
 
 ```sh
-curl -X GET http://your_domain.combusiness/test -H "Authorization: Bearer your_jwt_token"
+curl -X GET http://your_domain.combusiness/business/test -H "Authorization: Bearer your_jwt_token"
 ```

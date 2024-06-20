@@ -7,5 +7,5 @@
  */
 
 return [
-    'jwt_key' => 'jader',
+    'jwt_key' => env('JWT_KEY', 'jader'),
 ];

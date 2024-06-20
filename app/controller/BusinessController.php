@@ -11,7 +11,7 @@ namespace app\controller;
 use app\BaseController;
 use think\facade\Request;
 
-class Business extends BaseController
+class BusinessController extends BaseController
 {
     public function test()
     {

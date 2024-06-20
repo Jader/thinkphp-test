@@ -11,10 +11,11 @@
 use think\facade\Route;
 
 // 登录接口不需要验证
-Route::post('user/login', 'User/login');
+Route::post('user/login', 'UserController/login');
 
 // 其他需要验证的业务接口
 Route::group(function() {
-    Route::get('business/test', 'Business/test');
+    Route::get('user/userinfo', 'UserController/getUserInfo');
+    Route::get('business/test', 'BusinessController/test');
     // 其他业务接口
 })->middleware(\app\middleware\AuthMiddleware::class);

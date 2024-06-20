@@ -7,8 +7,12 @@ project_root/
 |   |   |-- Login.php
 |   |-- middleware/
 |   |   |-- AuthMiddleware.php
+|   |-- service/
+|   |   |-- UserService.php
 |   |-- model/
 |   |   |-- User.php
+|   |-- dao/
+|   |   |-- UserDao.php
 |-- config/
 |   |-- auth.php
 |-- route/
@@ -26,5 +30,5 @@ curl -X POST http://your_domain.com/user/login -d "username=your_username&passwo
 ## 测试业务API
 
 ```sh
-curl -X GET http://your_domain.combusiness/business/test -H "Authorization: Bearer your_jwt_token"
+curl -X GET http://your_domain.combusiness/user/userinfo -H "Authorization: Bearer your_jwt_token"
 ```

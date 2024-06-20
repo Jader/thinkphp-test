@@ -13,6 +13,9 @@ use think\facade\Request;
 
 class BusinessController extends BaseController
 {
+    /**
+     * @return \think\response\Json
+     */
     public function test()
     {
         $user = Request::instance()->user;

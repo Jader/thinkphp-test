@@ -16,6 +16,11 @@ use think\Response;
 
 class AuthMiddleware
 {
+    /**
+     * @param $request
+     * @param \Closure $next
+     * @return mixed|Response
+     */
     public function handle($request, \Closure $next)
     {
         $authHeader = $request->header('Authorization');

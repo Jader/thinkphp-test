@@ -1,4 +1,7 @@
-## 目录结构
+
+## 简易版 thinkphp api 测试
+
+### 目录结构
 
 ```
 project_root/
@@ -21,13 +24,13 @@ project_root/
 
 ```
 
-## 测试登录API
+### 测试登录API
 
 ```sh
 curl -X POST http://your_domain.com/user/login -d "username=your_username&password=your_password"
 ```
 
-## 测试业务API
+### 测试业务API
 
 ```sh
 curl -X GET http://your_domain.combusiness/user/userinfo -H "Authorization: Bearer your_jwt_token"

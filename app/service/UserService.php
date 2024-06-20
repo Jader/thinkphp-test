@@ -14,15 +14,30 @@ use think\facade\Config;
 
 class UserService
 {
+    /**
+     * @var UserDao
+     */
     protected $userDao;
+
+    /**
+     * @var mixed
+     */
     protected $key;
 
+    /**
+     * @param UserDao $userDao
+     */
     public function __construct(UserDao $userDao)
     {
         $this->userDao = $userDao;
         $this->key = Config::get('auth.jwt_key');
     }
 
+    /**
+     * @param $username
+     * @param $password
+     * @return array|string[]
+     */
     public function login($username, $password)
     {
         $user = $this->userDao->findByUsernameAndPassword($username, md5($password));
@@ -41,6 +56,10 @@ class UserService
         }
     }
 
+    /**
+     * @param $authHeader
+     * @return array|string[]
+     */
     public function getUserInfo($authHeader)
     {
         if (!$authHeader) {
